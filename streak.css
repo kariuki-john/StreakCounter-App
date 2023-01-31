@@ -6,7 +6,7 @@
 body{
     background-color: #FF704C;
 }
-.One{
+.divOne{
     height: 65vh;
     display: flex;
     color: #fff;
@@ -15,16 +15,16 @@ body{
     gap: 60px;
     padding: 50px;
 }
-.One h1{
+.divOne h1{
     font-size: 34px;
 }
 ion-icon {
     font-size: 74px;
   }
-  .One img{
+  .divOne img{
     height: 65vh;
   }
-  .Two{
+  .divTwo{
     height: 65vh;
     display: flex;
     color: #fff;
@@ -33,11 +33,11 @@ ion-icon {
     gap: 60px;
     padding: 50px;
 }
-.Two h2{
+.divTwo h2{
     font-size: 28px;
     padding-bottom: 10px;
 }
-.Two form{
+.divTwo form{
     display: flex;
     flex-direction: column;
     width: 100px;
@@ -65,7 +65,7 @@ input{
     margin-bottom: 10px;
     margin-top: 10px;
 }
-.Two .listOutline{
+.divTwo .listOutline{
     width: 100px;
     height: 100px;
   }
@@ -77,7 +77,7 @@ input{
     gap: 60px;
     padding: 50px;
 }
-.Three .card{
+.divThree .card{
     width: 250px;
     height: 250px;
     padding: 10px;
@@ -88,13 +88,13 @@ input{
     justify-content: end;
     align-items: center;
 }
-.Three {
+.divThree {
     padding: 50px;
     text-align: center;
     background-color: #fff;
     color: #000;
 }
-.Three img{
+.divThree img{
     width: 150px;
     height: 150px;
 }
