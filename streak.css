@@ -5,9 +5,10 @@
 }
 body{
     background-color: #FF704C;
+    height: 30vh;
 }
 .divOne{
-    height: 65vh;
+    height: 50vh;
     display: flex;
     color: #fff;
     justify-content: space-evenly;
@@ -25,7 +26,7 @@ ion-icon {
     height: 65vh;
   }
   .divTwo{
-    height: 65vh;
+    height: 40vh;
     display: flex;
     color: #fff;
     justify-content: space-evenly;
@@ -44,12 +45,12 @@ ion-icon {
 }
 .inputs{
     text-align: center;
-    height: 65vh;
-    width: 450px;
-    
+    height: 330px;
+    width: 330px;
+    background-color: #fff;
 }
 h3{
-    color: #000;
+    color: red;
 }
 input{
     border: 2px solid #000;
@@ -60,7 +61,7 @@ input{
 }
  button{
    
-    width: 300px;
+    width: 160px;
     padding: 10px;
     margin-bottom: 10px;
     margin-top: 10px;
@@ -79,7 +80,7 @@ input{
 }
 .divThree .card{
     width: 250px;
-    height: 250px;
+    height: 300px;
     padding: 10px;
     border: 1px solid red;
     color: #000;
@@ -89,7 +90,7 @@ input{
     align-items: center;
 }
 .divThree {
-    padding: 50px;
+    padding: 150px;
     text-align: center;
     background-color: #fff;
     color: #000;
@@ -105,7 +106,7 @@ input{
     justify-content: center; */
 }
 .buttons button{
-    width: 100%;
+    width: 60%;
     border: none;
     outline: none;
     text-align: center;
@@ -128,6 +129,6 @@ input{
     justify-content: center;
     align-items: center;
 }
-.addtodologo{
-    background-color: #FF704C;
+.init{
+    max-height: fit-content;
 }

@@ -10,13 +10,14 @@ const popup = document.getElementById("popup") as HTMLDivElement;
 const modal = document.getElementById("modal") as HTMLDivElement;
 const streakcard = document.querySelector(".streakcard") as HTMLDivElement;
 const divtwo = document.querySelector(".divTwo") as HTMLDivElement;
-const submitButton = document.querySelector(
-  ".submitButton"
-) as HTMLButtonElement;
+const submitButton = document.querySelector(".submitButton") as HTMLButtonElement;
 const nameInput = document.querySelector(".name") as HTMLInputElement;
 const imageInput = document.querySelector(".image") as HTMLInputElement;
 const dateInput = document.querySelector(".date") as HTMLInputElement;
 const h2 = document.querySelector("h2") as HTMLHeadingElement;
+
+
+
 interface Streak {
   name: string;
   image: string;
@@ -31,6 +32,8 @@ class Streaks {
     this.myStreak.push(all);
     this.displayStreak();
   }
+
+
   displayStreak() {
     streakcard.innerHTML = "";
     this.myStreak.map((item, index) => {
@@ -60,6 +63,9 @@ class Streaks {
       });
     });
   }
+
+
+
   displayOne(index: number) {
     modal.innerHTML=""
     let onestreak = this.myStreak[index];
@@ -71,6 +77,7 @@ class Streaks {
     btn2.textContent = "close";
     const btn1 = document.createElement("button");
     btn1.textContent = "delete";
+    btn1.style.backgroundColor = "red"
 
     p.innerHTML = onestreak.name;
     p1.innerHTML = onestreak.image;
@@ -89,12 +96,19 @@ class Streaks {
     Div.className = "card";
     btn2.addEventListener("click", () => {
       modal.style.display = "none";
+      btn2.style.width= "1px";
+      
     });
     btn1.addEventListener("click", () => {
       handledelete(index);
       modal.style.display = "none";
+      btn1.style.width="fit-content"
+    
     });
   }
+
+
+
   deleteStreak(id: number) {
     this.myStreak.splice(id, 1);
     this.displayStreak();
@@ -103,12 +117,11 @@ class Streaks {
 
 class TimeDifference {
   static start() {
-    // timedifference.start
   }
 }
-// instances
+
 const streaksinstance = new Streaks();
-// add event listener
+
 divtwo.style.display = "none";
 addBtn.addEventListener("click", (e) => {
   e.preventDefault();
@@ -121,6 +134,7 @@ closeBtn.addEventListener("click", (e) => {
   divtwo.style.display = "none";
   divOne.style.display = "block";
   divOne.style.display = "flex";
+
 });
 
 submitButton.addEventListener("click", (e) => {
@@ -133,7 +147,7 @@ submitButton.addEventListener("click", (e) => {
     nameInput.style.border = "1px solid red";
     imageInput.style.border = "1px solid red";
     dateInput.style.border = "1px solid red";
-    h2.textContent = "Please Add A task";
+    h2.textContent = "Please fill in all fields";
     h2.style.color = "red";
   } else {
     const name = nameInput.value;

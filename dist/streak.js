@@ -59,6 +59,7 @@ class Streaks {
         btn2.textContent = "close";
         const btn1 = document.createElement("button");
         btn1.textContent = "delete";
+        btn1.style.backgroundColor = "red";
         p.innerHTML = onestreak.name;
         p1.innerHTML = onestreak.image;
         p2.innerHTML = onestreak.date;
@@ -74,10 +75,12 @@ class Streaks {
         Div.className = "card";
         btn2.addEventListener("click", () => {
             modal.style.display = "none";
+            btn2.style.width = "1px";
         });
         btn1.addEventListener("click", () => {
             handledelete(index);
             modal.style.display = "none";
+            btn1.style.width = "fit-content";
         });
     }
     deleteStreak(id) {
@@ -87,12 +90,9 @@ class Streaks {
 }
 class TimeDifference {
     static start() {
-        // timedifference.start
     }
 }
-// instances
 const streaksinstance = new Streaks();
-// add event listener
 divtwo.style.display = "none";
 addBtn.addEventListener("click", (e) => {
     e.preventDefault();
@@ -114,7 +114,7 @@ submitButton.addEventListener("click", (e) => {
         nameInput.style.border = "1px solid red";
         imageInput.style.border = "1px solid red";
         dateInput.style.border = "1px solid red";
-        h2.textContent = "Please Add A task";
+        h2.textContent = "Please fill in all fields";
         h2.style.color = "red";
     }
     else {
